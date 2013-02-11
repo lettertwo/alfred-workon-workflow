@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>lettertwo.workon</string>
+	<key>connections</key>
+	<dict>
+		<key>393E6B8E-68AF-495A-993E-70CF26C1C997</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>89BA763B-6661-44C6-A398-209A1C4A506B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Eric Eldredge</string>
+	<key>description</key>
+	<string>Get to work quickly!</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Workon</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>workon</string>
+				<key>script</key>
+				<string>from workon import list_projects
+
+print(list_projects('{query}'))</string>
+				<key>subtext</key>
+				<string>type a project name</string>
+				<key>title</key>
+				<string>Get to work on...</string>
+				<key>type</key>
+				<integer>3</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>393E6B8E-68AF-495A-993E-70CF26C1C997</string>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>alfred.workflow.output.largetype</string>
+			<key>uid</key>
+			<string>89BA763B-6661-44C6-A398-209A1C4A506B</string>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>393E6B8E-68AF-495A-993E-70CF26C1C997</key>
+		<dict>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+		<key>89BA763B-6661-44C6-A398-209A1C4A506B</key>
+		<dict>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string>http://github.com/lettertwo</string>
+</dict>
+</plist>
