@@ -5,10 +5,17 @@ import re
 
 project_dir = os.path.expanduser('~/Projects')
 
+attrs = ('uid', 'arg', 'type', 'valid', 'autocomplete')
+els = ('title', 'subtitle', 'icon')
+
 def serialize(project):
+    path = os.path.join(project_dir, project)
     return {
         'title': project,
-        'subtitle': 'subtitle here'
+        'subtitle': path,
+        'arg': path,
+        'uid': path,
+        'type': 'file',
     }
 
 def find_projects(query='.*'):
@@ -21,9 +28,18 @@ def list_projects(kw=None):
         item = SubElement(items, 'item')
         item.set('uid', '%d' % i)
         for k, v in serialize(project).items():
-            key = SubElement(item, k)
-            key.text = v
+            if k in attrs:
+                item.set(k, v)
+            elif k in els:
+                key = SubElement(item, k)
+                key.text = v
     return tostring(items)
+
+
+def get_project(path):
+
+    return path
+
 
 
 if __name__ == '__main__':
