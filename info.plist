@@ -12,6 +12,22 @@
 				<key>destinationuid</key>
 				<string>F233F5A6-4527-488B-8350-07331B7361EF</string>
 				<key>modifiers</key>
+				<integer>524288</integer>
+				<key>modifiersubtext</key>
+				<string>Open in SublimeText only</string>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>5239E990-B58D-49AE-95DC-A8BB203CAFF9</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>DAA21BAD-5F05-4B1E-B3E9-601212AFCD6B</string>
+				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
@@ -20,9 +36,9 @@
 				<key>destinationuid</key>
 				<string>54436A85-34C6-4DD9-99FD-7B0B5F39B027</string>
 				<key>modifiers</key>
-				<integer>0</integer>
+				<integer>1048576</integer>
 				<key>modifiersubtext</key>
-				<string></string>
+				<string>Open in iTerm only</string>
 			</dict>
 		</array>
 		<key>F233F5A6-4527-488B-8350-07331B7361EF</key>
@@ -68,6 +84,23 @@ print(list_projects('{query}'))</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>from workon import open_project
+
+open_project('{query}')</string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>DAA21BAD-5F05-4B1E-B3E9-601212AFCD6B</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>openwith</key>
 				<string>/Applications/Sublime Text.app</string>
 			</dict>
@@ -93,6 +126,17 @@ open_project('{query}')</string>
 			<key>uid</key>
 			<string>54436A85-34C6-4DD9-99FD-7B0B5F39B027</string>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>openwith</key>
+				<string>/Applications/Sublime Text.app</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openfile</string>
+			<key>uid</key>
+			<string>5239E990-B58D-49AE-95DC-A8BB203CAFF9</string>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
@@ -101,17 +145,27 @@ open_project('{query}')</string>
 		<key>393E6B8E-68AF-495A-993E-70CF26C1C997</key>
 		<dict>
 			<key>ypos</key>
-			<real>180</real>
+			<real>170</real>
+		</dict>
+		<key>5239E990-B58D-49AE-95DC-A8BB203CAFF9</key>
+		<dict>
+			<key>ypos</key>
+			<real>120</real>
 		</dict>
 		<key>54436A85-34C6-4DD9-99FD-7B0B5F39B027</key>
 		<dict>
 			<key>ypos</key>
-			<real>250</real>
+			<real>340</real>
+		</dict>
+		<key>DAA21BAD-5F05-4B1E-B3E9-601212AFCD6B</key>
+		<dict>
+			<key>ypos</key>
+			<real>230</real>
 		</dict>
 		<key>F233F5A6-4527-488B-8350-07331B7361EF</key>
 		<dict>
 			<key>ypos</key>
-			<real>100</real>
+			<real>10</real>
 		</dict>
 	</dict>
 	<key>webaddress</key>
