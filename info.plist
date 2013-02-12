@@ -10,24 +10,23 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>EDC7B696-84D1-405E-96EB-B37E23769B25</string>
+				<string>F233F5A6-4527-488B-8350-07331B7361EF</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
 			</dict>
-		</array>
-		<key>EDC7B696-84D1-405E-96EB-B37E23769B25</key>
-		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>89BA763B-6661-44C6-A398-209A1C4A506B</string>
+				<string>54436A85-34C6-4DD9-99FD-7B0B5F39B027</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
 			</dict>
 		</array>
+		<key>F233F5A6-4527-488B-8350-07331B7361EF</key>
+		<array/>
 	</dict>
 	<key>createdby</key>
 	<string>Eric Eldredge</string>
@@ -67,10 +66,15 @@ print(list_projects('{query}'))</string>
 			<string>393E6B8E-68AF-495A-993E-70CF26C1C997</string>
 		</dict>
 		<dict>
+			<key>config</key>
+			<dict>
+				<key>openwith</key>
+				<string>/Applications/Sublime Text.app</string>
+			</dict>
 			<key>type</key>
-			<string>alfred.workflow.output.largetype</string>
+			<string>alfred.workflow.action.openfile</string>
 			<key>uid</key>
-			<string>89BA763B-6661-44C6-A398-209A1C4A506B</string>
+			<string>F233F5A6-4527-488B-8350-07331B7361EF</string>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -78,16 +82,16 @@ print(list_projects('{query}'))</string>
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>script</key>
-				<string>from workon import get_project
+				<string>from workon import open_project
 
-print(get_project('{query}'))</string>
+open_project('{query}')</string>
 				<key>type</key>
 				<integer>3</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>EDC7B696-84D1-405E-96EB-B37E23769B25</string>
+			<string>54436A85-34C6-4DD9-99FD-7B0B5F39B027</string>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -97,17 +101,17 @@ print(get_project('{query}'))</string>
 		<key>393E6B8E-68AF-495A-993E-70CF26C1C997</key>
 		<dict>
 			<key>ypos</key>
-			<real>120</real>
+			<real>180</real>
 		</dict>
-		<key>89BA763B-6661-44C6-A398-209A1C4A506B</key>
+		<key>54436A85-34C6-4DD9-99FD-7B0B5F39B027</key>
 		<dict>
 			<key>ypos</key>
-			<real>120</real>
+			<real>220</real>
 		</dict>
-		<key>EDC7B696-84D1-405E-96EB-B37E23769B25</key>
+		<key>F233F5A6-4527-488B-8350-07331B7361EF</key>
 		<dict>
 			<key>ypos</key>
-			<real>120</real>
+			<real>100</real>
 		</dict>
 	</dict>
 	<key>webaddress</key>
