@@ -1,4 +1,0 @@
-[submodule "PyAl"]
-	path = PyAl
-	url = git://github.com/phyllisstein/PyAl.git
-	ignore = dirty
