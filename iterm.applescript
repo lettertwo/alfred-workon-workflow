@@ -10,8 +10,7 @@ on run argv
 		tell _term
 			set _session to (launch session "Default Session")
 			tell _session
-				-- write text "history -d $((HISTCMD-1)); title " & title & "; cd " & dir & "; clear;"
-				write text "history -d $((HISTCMD-1)); cd " & dir & "; echo -e \"\\[\\033]0;" & title & "\\007\\]\"; clear;"
+				write text " cd " & dir & "; clear;"
 			end tell
 		end tell
 	end tell
