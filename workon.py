@@ -7,15 +7,14 @@ import subprocess
 sys.path.append(os.path.join(os.path.dirname(__file__), 'alp'))
 import alp
 
+settings = alp.Settings()
 
-project_types = {
-    '.sublime-workspace': {
-        'cmd': '/usr/local/bin/subl',
-    },
-    # '.tmproj': {
-    #     'cmd': 'mate',
-    # },
-}
+if settings.get('project_types') is None:
+    settings.set(project_types={
+        ".sublime-workspace": {
+            "cmd": "/usr/local/bin/subl",
+        },
+    })
 
 
 def get_project_title(project_path):
@@ -29,7 +28,7 @@ def serialize_project(project_path, project_type):
         arg=project_path,
         uid=project_path,
     )
-    project.update(project_types[project_type])
+    project.update(settings.get('project_types')[project_type])
     return project
 
 
@@ -37,7 +36,7 @@ def find_projects(query=None):
     if query is None:
         query = '.*'
     query = re.compile(r'%s' % query, re.IGNORECASE)
-    for t in project_types.keys():
+    for t in settings.get('project_types').keys():
         type_query = re.compile(r'.+%s$' % t)
         for p in alp.find(t):
             if type_query.match(p) and query.search(p):
